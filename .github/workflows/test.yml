@@ -2,7 +2,7 @@ name: Regression Test
 
 on:
   push:
-    branches: [main, ci]
+    branches: [main, ci, aiostreams]
   pull_request:
   workflow_dispatch:
 
