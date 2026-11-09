@@ -226,6 +226,12 @@ export class ASSRenderer {
     this._wasm.setDefaultFont(this._defaultFont)
   }
 
+  // where lines without a set position go, from 0 (bottom) to 100 (top)
+  setLinePosition (position: number) {
+    this._wasm.setLinePosition(position)
+    if (this._lastDrawTime) this._draw(this._lastDrawTime, true)
+  }
+
   async _log (log: string) {
     console.debug(log)
     const match = log.match(/JASSUB: fontselect:[^(]+: \(([^,]*), (\d{1,4}), \d+\)/)

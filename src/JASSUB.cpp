@@ -245,6 +245,10 @@ public:
     ass_set_margins(ass_renderer, top, bottom, left, right);
   }
 
+  void setLinePosition(double position) {
+    ass_set_line_position(ass_renderer, position);
+  }
+
   unsigned setThreads(int threads) {
     return ass_set_threads(ass_renderer, threads);
   }
@@ -379,6 +383,7 @@ EMSCRIPTEN_BINDINGS(JASSUB) {
     .function("addFont", &JASSUB::addFont)
     .function("reloadFonts", &JASSUB::reloadFonts)
     .function("setMargin", &JASSUB::setMargin)
+    .function("setLinePosition", &JASSUB::setLinePosition)
     .function("getEvents", &JASSUB::getEvents)
     .function("getStyles", &JASSUB::getStyles)
     .function("createEvent", &JASSUB::createEvent)
