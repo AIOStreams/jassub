@@ -1,6 +1,6 @@
 {
   "name": "@aiostreams/jassub",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The Fastest JavaScript SSA/ASS Subtitle Renderer For Browsers",
   "main": "dist/jassub.js",
   "types": "dist/jassub.d.ts",
